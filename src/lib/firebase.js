@@ -3,6 +3,9 @@ import 'firebase/firestore'
 import 'firebase/auth'
 
 //Here I want to import the seed file
+// import { seedDatabase } from '../seed'
+
+
 const config = {
     apiKey: "AIzaSyBAQUKHtU3gxYev_mXWxeRDMDOJiltI7aQ",
     authDomain: "instagram-clone-1b6cc.firebaseapp.com",
