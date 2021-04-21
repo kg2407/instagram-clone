@@ -2,13 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import FirebaseContext from './context/firebase'
+import { firebase, FieldValue } from './lib/firebase'
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+ReactDOM.render(
+  <FirebaseContext.Provider value={{firebase, FieldValue}}>
+    <App />
+  </FirebaseContext.Provider>, 
+  document.getElementById('root'));
+
